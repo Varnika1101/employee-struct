@@ -1,0 +1,70 @@
+#include <stdio.h>
+#include <stdlib.h>
+ 
+struct Employees
+{
+    char name[30];
+    char depname[30];
+    int no;
+    int salary;
+ 
+} emp[20];
+void display(struct Employees emp[20]);
+int main()
+{
+    int i;
+ 
+    //Taking each employee detail as input
+       printf("Enter 20 Employee Details \n \n");
+    for(i=0; i<20; i++){
+ 
+        printf("Employee %d:- \n",i+1);
+        //Name
+        printf("Name: ");
+        scanf("%s",emp[i].name);
+        //ID
+        printf("Employee no. : ");
+        scanf("%d",&emp[i].no);
+        //Department Name
+        printf("Department Name: ");
+        scanf("%s",emp[i].depname);
+        //Salary
+        printf("Salary: ");
+        scanf("%d",&emp[i].salary);
+ 
+        printf("\n");
+    }
+    
+    display(emp);
+    return 0;
+}
+void display(struct Employees emp[20])
+{
+	int i;
+	    //Displaying Employee details
+ 	
+    printf("-------------- All Employees Details ---------------\n");
+ 	for(i=0; i<20; i++)
+	 {
+ 
+        printf("Employee %d:- \n",i+1);
+        //Name
+        printf("Name: ");
+        printf("%s\t",emp[i].name);
+        //ID
+        printf("Employee no. : ");
+        printf("%d\t",emp[i].no);
+        //Department Name
+        printf("Department Name: ");
+        printf("%s\t",emp[i].depname);
+        //Salary
+        printf("Salary: ");
+        printf("%d\t",emp[i].salary);
+ 
+        printf("\n");
+    }
+    
+        printf("\n");
+
+ 
+}
